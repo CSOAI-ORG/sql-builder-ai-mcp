@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "sql-builder-ai-mcp"
+version = "1.0.0"
+description = "MEOK AI Labs — sql-builder-ai-mcp MCP Server"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]
+dependencies = ["mcp>=1.0.0"]
+[project.urls]
+Homepage = "https://meok.ai"
+Repository = "https://github.com/CSOAI-ORG/sql-builder-ai-mcp"
