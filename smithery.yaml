@@ -1,0 +1,10 @@
+name: sql-builder-ai-mcp
+description: "MEOK AI Labs — SQL query building and analysis tools powered by MEOK AI Labs."
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/sql-builder-ai-mcp
+license: MIT
+categories: [Database, Developer Tools]
+tags: [sql, query-builder, database-query, sql-generation, orm]
+runtime: python
+entrypoint: server.py

@@ -1,0 +1,23 @@
+{
+  "name": "sql-builder-ai-mcp",
+  "description": "MEOK AI Labs \u2014 SQL query building and analysis tools powered by MEOK AI Labs.",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/sql-builder-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "build_select",
+    "build_insert",
+    "explain_query",
+    "optimize_query_hints"
+  ],
+  "categories": [
+    "Database",
+    "Developer Tools"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}

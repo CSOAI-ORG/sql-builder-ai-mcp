@@ -1,14 +1,29 @@
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
 [project]
 name = "sql-builder-ai-mcp"
 version = "1.0.0"
-description = "MEOK AI Labs — sql-builder-ai-mcp MCP Server"
-license = {file = "LICENSE"}
+description = "MEOK AI Labs — SQL query building and analysis tools powered by MEOK AI Labs."
+authors = [{name="MEOK AI Labs", email="nicholas@meok.ai"}]
+readme = "README.md"
+license = {text = "MIT"}
 requires-python = ">=3.10"
-authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]
-dependencies = ["mcp>=1.0.0"]
+keywords = ["mcp", "mcp-server", "model-context-protocol", "claude", "ai-tools", "meok-ai-labs", "sql", "query-builder", "database-query", "sql-generation", "orm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "mcp>=1.0.0",
+]
+
 [project.urls]
 Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/sql-builder-ai-mcp"
+Documentation = "https://meok.ai/docs/sql-builder-ai-mcp"
+"Bug Tracker" = "https://github.com/CSOAI-ORG/sql-builder-ai-mcp/issues"
