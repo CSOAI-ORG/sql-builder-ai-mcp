@@ -1,10 +1,50 @@
 name: sql-builder-ai-mcp
-description: "MEOK AI Labs — SQL query building and analysis tools powered by MEOK AI Labs."
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/sql-builder-ai-mcp
-license: MIT
-categories: [Database, Developer Tools]
-tags: [sql, query-builder, database-query, sql-generation, orm]
-runtime: python
-entrypoint: server.py
+description: SQL query building, INSERT generation, query analysis, and optimization
+  hints.
+version: 1.0.0
+tools:
+- name: build_select
+  description: Build a SELECT SQL query from structured parameters.
+  parameters:
+  - name: table
+    type: string
+    required: true
+  - name: columns
+    type: string
+    required: false
+  - name: where
+    type: string
+    required: false
+  - name: order_by
+    type: string
+    required: false
+  - name: limit
+    type: integer
+    required: false
+  - name: joins
+    type: string
+    required: false
+- name: build_insert
+  description: Build an INSERT SQL query from a list of row dicts.
+  parameters:
+  - name: table
+    type: string
+    required: true
+  - name: rows
+    type: array
+    required: true
+  - name: on_conflict
+    type: string
+    required: false
+- name: explain_query
+  description: Analyze and explain a SQL query's structure and components.
+  parameters:
+  - name: sql
+    type: string
+    required: true
+- name: optimize_query_hints
+  description: Suggest optimizations for a SQL query.
+  parameters:
+  - name: sql
+    type: string
+    required: true

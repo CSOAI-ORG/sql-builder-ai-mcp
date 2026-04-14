@@ -3,6 +3,11 @@ SQL Builder AI MCP Server
 SQL query building and analysis tools powered by MEOK AI Labs.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import re
 import time
 from collections import defaultdict
@@ -36,7 +41,7 @@ SQL_KEYWORDS = {"SELECT", "FROM", "WHERE", "INSERT", "UPDATE", "DELETE", "JOIN",
 def build_select(
     table: str, columns: list[str] | None = None, where: dict | None = None,
     order_by: str = "", limit: int = 0, joins: list[dict] | None = None
-) -> dict:
+, api_key: str = "") -> dict:
     """Build a SELECT SQL query from structured parameters.
 
     Args:
@@ -47,6 +52,10 @@ def build_select(
         limit: LIMIT clause (0 = no limit)
         joins: List of dicts with keys: table, on, type (LEFT/INNER/RIGHT)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("build_select")
     cols = ", ".join(columns) if columns else "*"
     sql = f"SELECT {cols}\nFROM {table}"
@@ -79,7 +88,7 @@ def build_select(
 
 
 @mcp.tool()
-def build_insert(table: str, rows: list[dict], on_conflict: str = "") -> dict:
+def build_insert(table: str, rows: list[dict], on_conflict: str = "", api_key: str = "") -> dict:
     """Build an INSERT SQL query from a list of row dicts.
 
     Args:
@@ -87,6 +96,10 @@ def build_insert(table: str, rows: list[dict], on_conflict: str = "") -> dict:
         rows: List of dicts (each dict is a row, keys are column names)
         on_conflict: Conflict resolution: '' (none), 'ignore', 'update'
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("build_insert")
     if not rows:
         return {"error": "No rows provided"}
@@ -110,12 +123,16 @@ def build_insert(table: str, rows: list[dict], on_conflict: str = "") -> dict:
 
 
 @mcp.tool()
-def explain_query(sql: str) -> dict:
+def explain_query(sql: str, api_key: str = "") -> dict:
     """Analyze and explain a SQL query's structure and components.
 
     Args:
         sql: SQL query string to analyze
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("explain_query")
     sql_upper = sql.upper().strip()
     query_type = "UNKNOWN"
@@ -142,12 +159,16 @@ def explain_query(sql: str) -> dict:
 
 
 @mcp.tool()
-def optimize_query_hints(sql: str) -> dict:
+def optimize_query_hints(sql: str, api_key: str = "") -> dict:
     """Suggest optimizations for a SQL query.
 
     Args:
         sql: SQL query string to analyze for optimizations
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("optimize_query_hints")
     hints = []
     sql_upper = sql.upper()

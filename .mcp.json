@@ -1,23 +1,92 @@
 {
   "name": "sql-builder-ai-mcp",
-  "description": "MEOK AI Labs \u2014 SQL query building and analysis tools powered by MEOK AI Labs.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/sql-builder-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "SQL query building, INSERT generation, query analysis, and optimization hints.",
+  "version": "1.0.0",
   "tools": [
-    "build_select",
-    "build_insert",
-    "explain_query",
-    "optimize_query_hints"
-  ],
-  "categories": [
-    "Database",
-    "Developer Tools"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "build_select",
+      "description": "Build a SELECT SQL query from structured parameters.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "table": {
+            "type": "string"
+          },
+          "columns": {
+            "type": "string"
+          },
+          "where": {
+            "type": "string"
+          },
+          "order_by": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "joins": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "table"
+        ]
+      }
+    },
+    {
+      "name": "build_insert",
+      "description": "Build an INSERT SQL query from a list of row dicts.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "table": {
+            "type": "string"
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "on_conflict": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "table",
+          "rows"
+        ]
+      }
+    },
+    {
+      "name": "explain_query",
+      "description": "Analyze and explain a SQL query's structure and components.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "sql": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sql"
+        ]
+      }
+    },
+    {
+      "name": "optimize_query_hints",
+      "description": "Suggest optimizations for a SQL query.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "sql": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sql"
+        ]
+      }
+    }
+  ]
 }
