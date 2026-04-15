@@ -1,5 +1,6 @@
 name: sql-builder-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Sql Builder Ai automation via MCP. Includes build select, build insert,
+  explain query. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: build_select

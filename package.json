@@ -1,7 +1,7 @@
 {
   "name": "sql-builder-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs — sql builder MCP Server",
+  "description": "Sql Builder Ai automation via MCP. Includes build select, build insert, explain query. By MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "sql builder",
@@ -9,10 +9,22 @@
     "homepage": "https://meok.ai",
     "repository": "https://github.com/CSOAI-ORG/sql-builder-ai-mcp",
     "runtime": "python",
-    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "ai-tools"
+    ]
   },
-  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs"
+  ],
   "author": "MEOK AI Labs <nicholas@meok.ai>",
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/sql-builder-ai-mcp"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/sql-builder-ai-mcp"
+  }
 }
