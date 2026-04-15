@@ -1,6 +1,6 @@
 {
   "name": "sql-builder-ai-mcp",
-  "description": "SQL query building, INSERT generation, query analysis, and optimization hints.",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
   "version": "1.0.0",
   "tools": [
     {
@@ -13,10 +13,10 @@
             "type": "string"
           },
           "columns": {
-            "type": "string"
+            "type": "array"
           },
           "where": {
-            "type": "string"
+            "type": "object"
           },
           "order_by": {
             "type": "string"
@@ -25,7 +25,7 @@
             "type": "integer"
           },
           "joins": {
-            "type": "string"
+            "type": "array"
           }
         },
         "required": [
@@ -43,10 +43,7 @@
             "type": "string"
           },
           "rows": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "on_conflict": {
             "type": "string"

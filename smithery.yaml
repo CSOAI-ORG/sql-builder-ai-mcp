@@ -1,6 +1,5 @@
 name: sql-builder-ai-mcp
-description: SQL query building, INSERT generation, query analysis, and optimization
-  hints.
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: build_select
@@ -10,10 +9,10 @@ tools:
     type: string
     required: true
   - name: columns
-    type: string
+    type: array
     required: false
   - name: where
-    type: string
+    type: object
     required: false
   - name: order_by
     type: string
@@ -22,7 +21,7 @@ tools:
     type: integer
     required: false
   - name: joins
-    type: string
+    type: array
     required: false
 - name: build_insert
   description: Build an INSERT SQL query from a list of row dicts.
