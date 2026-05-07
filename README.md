@@ -1,3 +1,5 @@
+[![sql-builder-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/sql-builder-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/sql-builder-ai-mcp)
+
 # Sql Builder Ai
 
 > By [MEOK AI Labs](https://meok.ai) — MEOK AI Labs MCP Server
