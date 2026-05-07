@@ -3,7 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "sql-builder-ai-mcp"
-version = "1.0.2"
+version = "1.0.3"
+readme = "README.md"
 description = "Sql Builder Ai automation via MCP. Includes build select, build insert, explain query. By MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
