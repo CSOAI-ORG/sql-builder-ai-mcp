@@ -1,76 +1,78 @@
-[![sql-builder-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/sql-builder-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/sql-builder-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/sql-builder-ai-mcp)](https://pypi.org/project/sql-builder-ai-mcp/)
+# Sql Builder Ai MCP
 
-[![sql-builder-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/sql-builder-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/sql-builder-ai-mcp)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/sql_builder_ai_mcp/)
 
-# Sql Builder Ai
+> MEOK AI Labs MCP Server
 
-> By [MEOK AI Labs](https://meok.ai) — MEOK AI Labs MCP Server
+MEOK AI Labs MCP Server
 
-SQL Builder AI MCP Server
+---
 
-## Installation
-
-```bash
-pip install sql-builder-ai-mcp
-```
-
-## Usage
+## 🚀 Quick Start
 
 ```bash
-# Run standalone
-python server.py
+# Install via pip
+pip install sql_builder_ai_mcp
 
-# Or via MCP
-mcp install sql-builder-ai-mcp
+# Or install via Smithery
+npx -y @smithery/cli@latest install sql-builder-ai-mcp --client claude
 ```
 
-## Tools
+## ✨ Features
 
-### `build_select`
-Build a SELECT SQL query from structured parameters.
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-**Parameters:**
-- `table` (str)
-- `columns` (str)
-- `where` (str)
-- `order_by` (str)
-- `limit` (int)
-- `joins` (str)
+## 📖 Documentation
 
-### `build_insert`
-Build an INSERT SQL query from a list of row dicts.
+- [Full Documentation](https://docs.meok.ai/sql-builder-ai-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-**Parameters:**
-- `table` (str)
-- `rows` (str)
-- `on_conflict` (str)
+## 🛡️ Compliance
 
-### `explain_query`
-Analyze and explain a SQL query's structure and components.
+This MCP server is built with **EU AI Act compliance** built-in:
 
-**Parameters:**
-- `sql` (str)
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-### `optimize_query_hints`
-Suggest optimizations for a SQL query.
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-**Parameters:**
-- `sql` (str)
+## 🏢 Enterprise
 
+Need custom development, SLA guarantees, or white-label deployment?
 
-## Authentication
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
 
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
 
-## Links
+## 🤝 Part of the MEOK Ecosystem
 
-- **Website**: [meok.ai](https://meok.ai)
-- **GitHub**: [CSOAI-ORG/sql-builder-ai-mcp](https://github.com/CSOAI-ORG/sql-builder-ai-mcp)
-- **PyPI**: [pypi.org/project/sql-builder-ai-mcp](https://pypi.org/project/sql-builder-ai-mcp/)
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
 
-## License
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
 
-MIT — MEOK AI Labs
-<!-- mcp-name: io.github.CSOAI-ORG/sql-builder-ai-mcp -->
+## 📜 License
+
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
+
+---
+
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
