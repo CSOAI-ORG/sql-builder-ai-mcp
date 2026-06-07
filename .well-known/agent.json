@@ -1,0 +1,59 @@
+{
+  "name": "sql-builder-ai-mcp",
+  "description": "Sql Builder Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/sql-builder-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "build_select",
+      "name": "Build Select",
+      "description": "build_select via sql-builder-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "build_insert",
+      "name": "Build Insert",
+      "description": "build_insert via sql-builder-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "explain_query",
+      "name": "Explain Query",
+      "description": "explain_query via sql-builder-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "optimize_query_hints",
+      "name": "Optimize Query Hints",
+      "description": "optimize_query_hints via sql-builder-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

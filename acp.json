@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "sql-builder-ai-mcp",
+    "description": "Sql Builder Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "sql-builder-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "build_select",
+      "build_insert",
+      "explain_query",
+      "optimize_query_hints"
+    ]
+  }
+}
