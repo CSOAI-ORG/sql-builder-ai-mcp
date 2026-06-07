@@ -1,4 +1,6 @@
 <!-- mcp-name: CSOAI-ORG/sql-builder-ai-mcp -->
+[![MCP Scorecard: 84/100](https://img.shields.io/badge/proofof.ai-84%2F100-5b21b6)](https://proofof.ai/scorecard/sql-builder-ai-mcp.html)
+
 # Sql Builder Ai MCP
 
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
