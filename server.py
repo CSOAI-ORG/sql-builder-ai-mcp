@@ -24,7 +24,7 @@ def _check_rate_limit(tool_name: str) -> None:
     now = time.time()
     _call_counts[tool_name] = [t for t in _call_counts[tool_name] if now - t < WINDOW]
     if len(_call_counts[tool_name]) >= FREE_TIER_LIMIT:
-        raise ValueError(f"Rate limit exceeded for {tool_name}. Free tier: {FREE_TIER_LIMIT}/day. Upgrade at https://meok.ai/pricing")
+        raise ValueError(f"Rate limit exceeded for {tool_name}. Free tier: {FREE_TIER_LIMIT}/day. Upgrade at https://councilof.ai")
     _call_counts[tool_name].append(now)
 
 
@@ -82,7 +82,7 @@ def build_select(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("build_select")
     cols = ", ".join(columns) if columns else "*"
@@ -154,7 +154,7 @@ def build_insert(table: str, rows: list[dict], on_conflict: str = "", api_key: s
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("build_insert")
     if not rows:
@@ -216,7 +216,7 @@ def explain_query(sql: str, api_key: str = "") -> dict:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("explain_query")
     sql_upper = sql.upper().strip()
@@ -281,7 +281,7 @@ def optimize_query_hints(sql: str, api_key: str = "") -> dict:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("optimize_query_hints")
     hints = []

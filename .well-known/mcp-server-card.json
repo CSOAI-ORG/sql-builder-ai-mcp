@@ -1,0 +1,25 @@
+{
+  "name": "sql-builder-ai-mcp",
+  "title": "Sql Builder Ai Mcp",
+  "description": "Sql Builder Ai automation via MCP. Includes build select, build insert, explain query. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "build_select"
+    },
+    {
+      "name": "build_insert"
+    },
+    {
+      "name": "explain_query"
+    },
+    {
+      "name": "optimize_query_hints"
+    }
+  ]
+}

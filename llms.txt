@@ -1,0 +1,20 @@
+# sql-builder-ai-mcp
+
+> Sql Builder Ai automation via MCP. Includes build select, build insert, explain query. By MEOK AI Labs.
+
+MCP server by MEOK AI Labs. Framework: fastmcp. Transport: stdio.
+
+## Tools
+- build_select
+- build_insert
+- explain_query
+- optimize_query_hints
+
+## Install
+```
+pip install sql-builder-ai-mcp
+```
+
+## Links
+- PyPI: https://pypi.org/project/sql-builder-ai-mcp/
+- Docs: https://meok.ai

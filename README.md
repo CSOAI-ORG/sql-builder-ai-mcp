@@ -76,3 +76,28 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 <p align="center">
   <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
 </p>
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "sql-builder-ai-mcp": {
+      "command": "uvx",
+      "args": ["sql-builder-ai-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install sql-builder-ai-mcp` then run the `sql-builder-ai-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `build_select` to …"
+- "Use `build_insert` to …"
+- "Use `explain_query` to …"
